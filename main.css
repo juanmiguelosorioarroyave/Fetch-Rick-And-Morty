@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section.box-mi-body{
+  top: 48rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  background: #0e1538;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 20px;
+}
+.box::before
+{
+  content: '';
+    position: absolute;
+    width: 100px;
+    height: 170%;
+    background: linear-gradient(#00d1e1, #c3ff00);
+    animation: animate 4s linear infinite;
+    border-radius: 16px;
+    z-index: -1;
+}
+
+.box::after
+{
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: #0e1538;
+  border-radius: 16px;
+  z-index: -1;
+}
+
+@keyframes animate {
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
+
+.box h2 {
+  color: #fff;
+    font-size: 2em;
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+}
+
+img{
+  width: 50%;
+}
+
+html,
+body {
+  margin: 37px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #1f1f1f;
+}
+body::-webkit-scrollbar {
+background-color: #282828;
+width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: #1f1f1f;
+}
+
+.container {
+padding: 0 15px;
+max-width: 1100px;
+}
+
+.title {
+font-size: 1.5em;
+}
+
+.img-fluid {
+max-width: 100%;
+height: auto;
+}
+
+.social-networks > a {
+color: #fff;
+padding: 5px 10px;
+text-align: center;
+background-color: #282828;
+text-decoration: none;
+border-radius: 5px;
+display: inline-block;
+}
+
+.eye{
+  position: absolute;
+  height: 176px;
+  top: 335px;
+  left: 345px;
+  width: 660px;
+  z-index: 1;
+}
+
+.heaven
+{
+  position: absolute;
+  height: 575px;
+  width: 109%;
+  left: -50px;
+  z-index: -1;
+  border-radius: 10px;
+  top: -50px;
+}
+
+[data-animate-header] {
+  background-color: rgb(31 31 31);
+  left: -515px;
+  position: absolute;
+  right: 0px;
+  top: 14px;
+  z-index: 1;
+  padding: 6px 604px 6px;
+}
+.header-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 12px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.container_products {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
