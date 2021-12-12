@@ -18,18 +18,24 @@ section.box-mi-body{
   z-index: 1;
 }
 
-.box {
-  position: relative;
-  width: 300px;
-  height: 300px;
+div#card {
+  width: 22rem;
+  height: 30rem;
+  border-radius: 10px;
+  border-style: solid;
   display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem;  
+  position: relative;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   border-radius: 20px;
 }
-.box::before
+div#card::before
 {
   content: '';
     position: absolute;
@@ -41,7 +47,7 @@ section.box-mi-body{
     z-index: -1;
 }
 
-.box::after
+div#card::after
 {
   content: '';
   position: absolute;
@@ -62,16 +68,12 @@ section.box-mi-body{
   }
 }
 
-.box h2 {
+.card h2 {
   color: #fff;
     font-size: 2em;
     position: absolute;
     z-index: 1;
     top: 25px;
-}
-
-img{
-  width: 50%;
 }
 
 html,
@@ -129,7 +131,7 @@ display: inline-block;
   height: 575px;
   width: 109%;
   left: -50px;
-  z-index: -1;
+  z-index: 0;
   border-radius: 10px;
   top: -50px;
 }
@@ -193,3 +195,45 @@ select::-ms-expand {
   display: none;
 }
 
+#main {
+  width: 100%;
+  top: 45rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+img#image {
+  border-radius: 15px;
+  width: 84%;
+  position: relative;
+  top: -50px;
+}
+
+#name {
+  width: 22rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #fff;
+  top: -25px;
+  position: relative;
+}
+#genero {
+  position: relative;
+  border-radius: 10px;
+  width: 20rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  top: 19rem;
+  font-size: 2rem;
+}

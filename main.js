@@ -1,7 +1,7 @@
 const URL = 'https://rickandmortyapi.com/api/character/';
 const selet_name = document.querySelector('.selet_name');
 const characteres = document.querySelector('.characteres');
-const person_container = document.querySelector('.box');
+const body = document.getElementById("main");
 
 selet_name.addEventListener('click', new_option);
 new_charact();
@@ -28,7 +28,7 @@ function new_charact(){
     .then((response) => response.json())
     .then((data) => {
         if (name_select === characteres.value){
-            person_container.innerHTML='';
+            body.innerHTML='';
 
             data.results.map(event => {
                 create_card(event)
@@ -37,7 +37,7 @@ function new_charact(){
         else{
             data.results.map(event =>{
                 if(event.name === name_select){
-                    person_container.innerHTML='';
+                    body.innerHTML='';
                     create_card(event) 
                     
                 }
@@ -45,25 +45,26 @@ function new_charact(){
         }
     }) 
 }
-const data = []
-function create_card(data){
-    const card = document.createElement('div');
-    const name = document.createElement('h2');
-    const imagecard = document.createElement('img');
-    const gender = document.createElement('p');
+function create_card(data) {
 
-    name.textContent =data.name;
-    imagecard.setAttribute('id', data.id);
-    imagecard.setAttribute('src', data.image);
-    imagecard.setAttribute('alt', data.name);
-    gender.textContent= data.gender;
+ const card = document.createElement('div');
+ const name = document.createElement('h2'); 
+ const genero = document.createElement('p'); 
+ const image_card = document.createElement('img');
 
-    card.appendChild(name);
-    card.appendChild(imagecard);
-    card.appendChild(gender);
+ card.setAttribute('id','card');
+ name.setAttribute('id','name');
+ genero.setAttribute('id','genero');
+ image_card.setAttribute('id','image');
 
-    person_container.appendChild(card);
-
+ name.textContent = data.name;
+ image_card.setAttribute("src", data.image);
+ image_card.setAttribute("alt", data.name);
+ genero.textContent = data.gender;
+ card.appendChild(name);
+ card.appendChild(genero);
+ card.appendChild(image_card);
+ body.appendChild(card); 
 }
 
 
